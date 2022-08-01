@@ -1,4 +1,18 @@
-# MLOPS PROJECT
+# MLOPS PROJECT (End to End)
+
+This is project for the [MLOps ZoomCamp](https://github.com/DataTalksClub/mlops-zoomcamp) course [here](https://github.com/DataTalksClub/mlops-zoomcamp/blob/main/07-project/README.md) sponsored by [DataTalks.Club](https://datatalks.club/)
+
+## Problem
+This is a simple end-to-end mlops project which takes data from [capital bikeshare](https://ride.capitalbikeshare.com/system-data) and transforms it with machine learning pipelines from training, model tracking and experimenting with [mlflow](https://mlflow.org/docs/latest/index.html#), ochestration with [prefect](https://orion-docs.prefect.io/) as workflow tool to deploying the model as a web service.
+
+The project runs locally and uses AWS S3 buckets to store model artifacts during model tracking and experimenting with mlflow.
+
+## Dataset
+
+The chosen dataset for this project is the [Capital Bikeshare Data](https://s3.amazonaws.com/capitalbikeshare-data/index.html)
+
+## Improvements
+In the future I hope to improve the project by having the entire infrastructure moved to cloud using AWS cloud(managing the infrastructure with iac tools such as terraform), have model deployment as either batch or streaming with AWS lambda and kinesis streams, a comprehesive model monitoring.
 
 ## Project Setup
 
@@ -108,4 +122,4 @@ prefect deployment run mlflow-staging/deploy-mlflow-staging
 
 ## Deploy model as a web service locally
 
-Change to `webservice` directory an follow the instructions [here](https://github.com/PatrickCmd/mlops-project/blob/main/web_service/README.md)
+Change to `webservice` directory and follow the instructions [here](https://github.com/PatrickCmd/mlops-project/blob/main/web_service/README.md)

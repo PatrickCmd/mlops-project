@@ -34,3 +34,9 @@ docker run --env-file .env -d -it \
 ```
 python test.py
 ```
+
+## Run all the above steps in one command
+
+```
+make build_webservice
+```
