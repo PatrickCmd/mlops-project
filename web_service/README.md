@@ -8,6 +8,13 @@ docker build -t ride-duration-prediction-service:v1 .
 
 ## Running the docker container service with logs
 
+Copy the `.env_exampple` file to `.env` and enter the corresponding correct values
+
+```
+cp .env_example .env
+```
+
+
 ```
 docker run --env-file .env -it \
     --rm -v $(pwd):/app \

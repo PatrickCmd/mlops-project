@@ -72,3 +72,40 @@ python stage.py --tracking_uri http://127.0.0.1:5000 --experiment_name valid_exp
 ```
 
 ![Register model](./images/register-model.png)
+
+
+### Create scheduled deployments and agent workers to start the deployments
+
+```
+prefect deployment create deployments.py
+````
+
+![deployments](./images/deployments.png)
+
+Create work queues
+
+```
+prefect work-queue create -t "ml-training" ml-training-queue
+prefect work-queue create -t "ml-staging" ml-staging-queue
+```
+
+![work queue](./images/work-queues.png)
+
+![training queue](./images/ml-training-queue.png)
+
+![staging queue](./images/ml-staging-queue.png)
+
+Run deployments locally to schedule pipeline flows
+
+```
+prefect deployment run mlflow-training/deploy-mlflow-training
+prefect deployment run mlflow-staging/deploy-mlflow-staging
+```
+
+![scheduled_flow_runs](./images/scheduled_flow_runs.png)
+
+
+
+## Deploy model as a web service locally
+
+Change to `webservice` directory an follow the instructions [here](https://github.com/PatrickCmd/mlops-project/blob/main/web_service/README.md)
