@@ -9,7 +9,6 @@ date_str = datetime.today().strftime("%Y-%m-%d")
 
 Deployment(
     name="deploy-mlflow-training",
-    # flow_name='mlflow-staging',
     schedule=IntervalSchedule(interval=timedelta(minutes=10080)),
     flow=FlowScript(path="./main.py", name="mlflow-training"),
     parameters={
@@ -21,7 +20,6 @@ Deployment(
 
 Deployment(
     name="deploy-mlflow-staging",
-    # flow_name='mlflow-staging',
     schedule=CronSchedule(
         cron="0 9 15 * *",
     ),
