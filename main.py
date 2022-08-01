@@ -61,7 +61,7 @@ def run_models(X_train, y_train, X_valid, y_valid):
             )
 
 
-@flow(task_runner=SequentialTaskRunner())
+@flow(name="mlflow-training", task_runner=SequentialTaskRunner())
 def main(train_file, valid_file):
     # Set and run experiment
     ctx = get_run_context()

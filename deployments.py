@@ -21,9 +21,9 @@ Deployment(
 Deployment(
     name="deploy-mlflow-staging",
     schedule=CronSchedule(
-        cron="0 9 15 * *",
+        cron="0 9 1 * *",
     ),
-    flow=FlowScript(path="./staging.py", name="mlflow-staging"),
+    flow=FlowScript(path="./stage.py", name="mlflow-staging"),
     parameters={
         "tracking_uri": "http://127.0.0.1:5000",
         "experiment_name": f"citibikes-experiment-{date_str}",

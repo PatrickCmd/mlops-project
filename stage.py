@@ -58,7 +58,7 @@ def stage_model(tracking_uri, experiment_name):
     )
 
 
-@flow(task_runner=SequentialTaskRunner())
+@flow(name="mlflow-staging", task_runner=SequentialTaskRunner())
 def main(tracking_uri, experiment_name):
     # Stage best model
     stage_model(tracking_uri=tracking_uri, experiment_name=experiment_name)
