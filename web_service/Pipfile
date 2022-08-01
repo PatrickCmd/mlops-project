@@ -1,0 +1,31 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+jupyter = "*"
+notebook = "*"
+black = "==22.6.0"
+requests = "*"
+isort = "==5.10.1"
+python-dotenv = "==0.20.0"
+
+[packages]
+tqdm = "*"
+pandas = "*"
+scikit-learn = "==1.1.1"
+seaborn = "*"
+matplotlib = "*"
+pyarrow = "*"
+plotly = "*"
+category-encoders = "==2.5.0"
+haversine = "==2.6.0"
+prefect = "==2.0b15"
+boto3 = "*"
+mlflow = "*"
+python-dotenv = "==0.20.0"
+gunicorn = "*"
+
+[requires]
+python_version = "3.9"
